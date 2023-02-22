@@ -58,11 +58,14 @@ int main()
     //    //cout << "\n";
     //}
 
-    int size{ 21 };
+    int size{ 11 };
     for (int i = 0; i < size; i++)
     {
         for (int j = 0; j < size; j++)
-            if (i == j)
+            if(i == j 
+                || i == size - 1 - j 
+                || i == size / 2 
+                || j == size / 2) // i + j == size - 1
                 cout << setw(2) << "*";
             else
                 cout << setw(2) << " ";
